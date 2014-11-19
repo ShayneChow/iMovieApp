@@ -14,14 +14,26 @@
 
 @implementation USAViewController
 
+#pragma mark - ViewController-life
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"北美榜单";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
+#pragma mark - Memory
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (self.view.window) {
+        self.view = nil;
+    }//将试图控制器中的强引用释放
 }
 
 /*
