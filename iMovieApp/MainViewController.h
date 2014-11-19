@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewExt.h"
 
-@interface MainViewController : UITabBarController
-
+@interface MainViewController : UITabBarController{
+@private
+    UIImageView *_tabBarBG;
+    UIImageView *_selectView;
+}
 @end

@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if ([self.navigationBar respondsToSelector:@selector(setBackgroundImage:forState:barMetrics:)]) {
+//        self.navigationBar.userInteractionEnabled = YES;
         [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg_all"] forBarMetrics:UIBarMetricsDefault];
     }
 }

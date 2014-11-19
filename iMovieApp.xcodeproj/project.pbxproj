@@ -64,6 +64,7 @@
 		262CF83E1A1C4E3C000C51F2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF83D1A1C4E3C000C51F2 /* MoreViewController.m */; };
 		262CF8411A1C5291000C51F2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8401A1C5291000C51F2 /* MainViewController.m */; };
 		262CF8441A1C8C7A000C51F2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8431A1C8C7A000C51F2 /* BaseNavigationController.m */; };
+		262CF8491A1CB5E9000C51F2 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8481A1CB5E9000C51F2 /* UIViewExt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,8 @@
 		262CF8401A1C5291000C51F2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		262CF8421A1C8C7A000C51F2 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		262CF8431A1C8C7A000C51F2 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		262CF8471A1CB5E9000C51F2 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewExt.h; path = "../../../电影项目课件和代码/02 第二天/WXMovie/WXMovie/UIViewExt.h"; sourceTree = "<group>"; };
+		262CF8481A1CB5E9000C51F2 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewExt.m; path = "../../../电影项目课件和代码/02 第二天/WXMovie/WXMovie/UIViewExt.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,7 @@
 		262CF7A51A1C49D3000C51F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				262CF8461A1CB590000C51F2 /* util */,
 				262CF7CB1A1C4B1F000C51F2 /* image */,
 				262CF7A61A1C49D3000C51F2 /* Info.plist */,
 				262CF7A71A1C49D3000C51F2 /* main.m */,
@@ -379,6 +383,15 @@
 			name = News;
 			sourceTree = "<group>";
 		};
+		262CF8461A1CB590000C51F2 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				262CF8471A1CB5E9000C51F2 /* UIViewExt.h */,
+				262CF8481A1CB5E9000C51F2 /* UIViewExt.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,6 +537,7 @@
 			files = (
 				262CF8351A1C4DF9000C51F2 /* TopViewController.m in Sources */,
 				262CF83E1A1C4E3C000C51F2 /* MoreViewController.m in Sources */,
+				262CF8491A1CB5E9000C51F2 /* UIViewExt.m in Sources */,
 				262CF8381A1C4E0F000C51F2 /* CinemaViewController.m in Sources */,
 				262CF7AE1A1C49D3000C51F2 /* ViewController.m in Sources */,
 				262CF8441A1C8C7A000C51F2 /* BaseNavigationController.m in Sources */,
