@@ -24,35 +24,22 @@
     
     //北美视图
     USAViewController *usaViewController = [[USAViewController alloc] init];
-    UITabBarItem *usaItem = [[UITabBarItem alloc] initWithTabBarSystemItem:0 tag:1];
-    usaViewController.tabBarItem = usaItem;
-//    [usaItem release];    //使用了ARC
     UINavigationController *usaNavigation = [[UINavigationController alloc] initWithRootViewController:usaViewController];
-//    [usaViewController release];
-    
     
     //新闻视图
     NewsViewController *newsViewController = [[NewsViewController alloc] init];
-    UITabBarItem *newsItem = [[UITabBarItem alloc] initWithTabBarSystemItem:1 tag:1];
-    newsViewController.tabBarItem = newsItem;
     UINavigationController *newsNavigation = [[UINavigationController alloc] initWithRootViewController:newsViewController];
     
     //Top100
     TopViewController *topViewController = [[TopViewController alloc] init];
-    UITabBarItem *topItem = [[UITabBarItem alloc] initWithTabBarSystemItem:2 tag:1];
-    topViewController.tabBarItem = topItem;
     UINavigationController *topNavigation = [[UINavigationController alloc] initWithRootViewController:topViewController];
     
     //影院视图
     CinemaViewController *cinemaViewController = [[CinemaViewController alloc] init];
-    UITabBarItem *cinemaItem = [[UITabBarItem alloc] initWithTabBarSystemItem:3 tag:1];
-    cinemaViewController.tabBarItem = cinemaItem;
     UINavigationController *cinemaNavigation = [[UINavigationController alloc] initWithRootViewController:cinemaViewController];
 
     //更多选项
     MoreViewController *moreViewController = [[MoreViewController alloc] init];
-    UITabBarItem *moreItem = [[UITabBarItem alloc] initWithTabBarSystemItem:4 tag:1];
-    moreViewController.tabBarItem = moreItem;
     UINavigationController *moreNavigation = [[UINavigationController alloc] initWithRootViewController:moreViewController];
     
     //创建数组，将以上视图的导航控制器添加到导航栏中

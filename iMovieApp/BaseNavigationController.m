@@ -1,24 +1,24 @@
 //
-//  USAViewController.m
+//  BaseNavigationController.m
 //  iMovieApp
 //
 //  Created by choushayne on 14/11/19.
 //  Copyright (c) 2014年 ShayneChow. All rights reserved.
 //
 
-#import "USAViewController.h"
+#import "BaseNavigationController.h"
 
-@interface USAViewController ()
+@interface BaseNavigationController ()
 
 @end
 
-@implementation USAViewController
+@implementation BaseNavigationController
 
 #pragma mark - ViewController-life
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"北美榜";
+        self.title = @"北美榜单";
     }
     return self;
 }
@@ -28,12 +28,9 @@
     // Do any additional setup after loading the view.
 }
 
-#pragma mark - Memory
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    if (self.view.window) {
-        self.view = nil;
-    }//将试图控制器中的强引用释放
+    // Dispose of any resources that can be recreated.
 }
 
 /*

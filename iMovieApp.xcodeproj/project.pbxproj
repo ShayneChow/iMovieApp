@@ -63,6 +63,7 @@
 		262CF83B1A1C4E22000C51F2 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF83A1A1C4E22000C51F2 /* NewsViewController.m */; };
 		262CF83E1A1C4E3C000C51F2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF83D1A1C4E3C000C51F2 /* MoreViewController.m */; };
 		262CF8411A1C5291000C51F2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8401A1C5291000C51F2 /* MainViewController.m */; };
+		262CF8441A1C8C7A000C51F2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8431A1C8C7A000C51F2 /* BaseNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		262CF83D1A1C4E3C000C51F2 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		262CF83F1A1C5291000C51F2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		262CF8401A1C5291000C51F2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		262CF8421A1C8C7A000C51F2 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		262CF8431A1C8C7A000C51F2 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				262CF7AA1A1C49D3000C51F2 /* AppDelegate.m */,
 				262CF83F1A1C5291000C51F2 /* MainViewController.h */,
 				262CF8401A1C5291000C51F2 /* MainViewController.m */,
+				262CF8421A1C8C7A000C51F2 /* BaseNavigationController.h */,
+				262CF8431A1C8C7A000C51F2 /* BaseNavigationController.m */,
 				262CF7AC1A1C49D3000C51F2 /* ViewController.h */,
 				262CF7AD1A1C49D3000C51F2 /* ViewController.m */,
 				262CF7AF1A1C49D3000C51F2 /* Main.storyboard */,
@@ -521,6 +526,7 @@
 				262CF83E1A1C4E3C000C51F2 /* MoreViewController.m in Sources */,
 				262CF8381A1C4E0F000C51F2 /* CinemaViewController.m in Sources */,
 				262CF7AE1A1C49D3000C51F2 /* ViewController.m in Sources */,
+				262CF8441A1C8C7A000C51F2 /* BaseNavigationController.m in Sources */,
 				262CF8411A1C5291000C51F2 /* MainViewController.m in Sources */,
 				262CF7AB1A1C49D3000C51F2 /* AppDelegate.m in Sources */,
 				262CF8321A1C4DDD000C51F2 /* USAViewController.m in Sources */,
