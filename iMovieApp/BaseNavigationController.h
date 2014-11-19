@@ -11,3 +11,7 @@
 @interface BaseNavigationController : UINavigationController
 
 @end
+
+@interface UINavigationBar (customBackground)
+
+@end

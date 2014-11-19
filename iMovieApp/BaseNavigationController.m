@@ -14,18 +14,20 @@
 
 @implementation BaseNavigationController
 
-#pragma mark - ViewController-life
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = @"北美榜单";
-    }
-    return self;
-}
+//#pragma mark - ViewController-life
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+////        self.title = @"北美榜单";
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if ([self.navigationBar respondsToSelector:@selector(setBackgroundImage:forState:barMetrics:)]) {
+        [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg_all"] forBarMetrics:UIBarMetricsDefault];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,5 +44,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+@end
+
+@implementation UINavigationBar (customBackground)
+
+- (void)drawRect:(CGRect)rect{
+    UIImage *img = [UIImage imageNamed:@"nav_bg_all"];
+    [img drawInRect:rect];
+}
 
 @end

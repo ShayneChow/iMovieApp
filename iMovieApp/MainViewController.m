@@ -12,6 +12,7 @@
 #import "TopViewController.h"
 #import "CinemaViewController.h"
 #import "MoreViewController.h"
+#import "BaseNavigationController.h"
 
 @interface MainViewController ()
 
@@ -24,23 +25,23 @@
     
     //北美视图
     USAViewController *usaViewController = [[USAViewController alloc] init];
-    UINavigationController *usaNavigation = [[UINavigationController alloc] initWithRootViewController:usaViewController];
+    BaseNavigationController *usaNavigation = [[BaseNavigationController alloc] initWithRootViewController:usaViewController];
     
     //新闻视图
     NewsViewController *newsViewController = [[NewsViewController alloc] init];
-    UINavigationController *newsNavigation = [[UINavigationController alloc] initWithRootViewController:newsViewController];
+    BaseNavigationController *newsNavigation = [[BaseNavigationController alloc] initWithRootViewController:newsViewController];
     
     //Top100
     TopViewController *topViewController = [[TopViewController alloc] init];
-    UINavigationController *topNavigation = [[UINavigationController alloc] initWithRootViewController:topViewController];
+    BaseNavigationController *topNavigation = [[BaseNavigationController alloc] initWithRootViewController:topViewController];
     
     //影院视图
     CinemaViewController *cinemaViewController = [[CinemaViewController alloc] init];
-    UINavigationController *cinemaNavigation = [[UINavigationController alloc] initWithRootViewController:cinemaViewController];
+    BaseNavigationController *cinemaNavigation = [[BaseNavigationController alloc] initWithRootViewController:cinemaViewController];
 
     //更多选项
     MoreViewController *moreViewController = [[MoreViewController alloc] init];
-    UINavigationController *moreNavigation = [[UINavigationController alloc] initWithRootViewController:moreViewController];
+    BaseNavigationController *moreNavigation = [[BaseNavigationController alloc] initWithRootViewController:moreViewController];
     
     //创建数组，将以上视图的导航控制器添加到导航栏中
     NSArray *viewControllers = @[usaNavigation, newsNavigation, topNavigation, cinemaNavigation, moreNavigation];
