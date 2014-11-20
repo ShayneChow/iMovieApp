@@ -13,6 +13,7 @@
 #import "CinemaViewController.h"
 #import "MoreViewController.h"
 #import "BaseNavigationController.h"
+#import "ItemView.h"
 
 @interface MainViewController ()
 
@@ -88,37 +89,54 @@
     //设置不同视图的背景图及标题
     int x = 0;
     for (int index = 0; index < 5; index++) {
-        UIImageView *item = [[UIImageView alloc] initWithFrame:CGRectMake(18+x, 10, 22, 22)];
-        item.tag = index;
-        item.contentMode = UIViewContentModeScaleAspectFit;     //默认为拉伸，改为适合（防止背景图变形）
-        item.userInteractionEnabled = YES;
-        item.image = [UIImage imageNamed:imgs[index]];          //不同视图的不同背景
-        [_tabBarBG addSubview:item];
         
-        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(item.left, item.bottom+2, item.width, 10)];
-        title.text = titles[index];
-        title.backgroundColor = [UIColor clearColor];       //去除lable的背景颜色
-        title.textColor = [UIColor whiteColor];             //设置title的字体颜色
-        title.font = [UIFont boldSystemFontOfSize:10];      //字号为10并加粗
-        title.textAlignment = NSTextAlignmentCenter;        //文字居中
-        [_tabBarBG addSubview:title];
+        ItemView *itemView = [[ItemView alloc] initWithFrame:CGRectMake(5+x, _tabBarBG.height/2-45.0/2, 50, 45)];
+        itemView.tag = index;
+        itemView.delegate = self;   //设置委托
+        itemView.item.image = [UIImage imageNamed:imgs[index]];
+        itemView.title.text = titles[index];
+        [_tabBarBG addSubview:itemView];
+        x += 65;
         
-        x += (item.width+43);
-        
-        //点击不同item即选中该视图
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(test:)];
-        [item addGestureRecognizer:tap];
+//        UIImageView *item = [[UIImageView alloc] initWithFrame:CGRectMake(18+x, 10, 22, 22)];
+//        item.tag = index;
+//        item.contentMode = UIViewContentModeScaleAspectFit;     //默认为拉伸，改为适合（防止背景图变形）
+//        item.userInteractionEnabled = YES;
+//        item.image = [UIImage imageNamed:imgs[index]];          //不同视图的不同背景
+//        [_tabBarBG addSubview:item];
+//        
+//        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(item.left, item.bottom+2, item.width, 10)];
+//        title.text = titles[index];
+//        title.backgroundColor = [UIColor clearColor];       //去除lable的背景颜色
+//        title.textColor = [UIColor whiteColor];             //设置title的字体颜色
+//        title.font = [UIFont boldSystemFontOfSize:10];      //字号为10并加粗
+//        title.textAlignment = NSTextAlignmentCenter;        //文字居中
+//        [_tabBarBG addSubview:title];
+//        
+//        x += (item.width+43);
+//        
+//        //点击不同item即选中该视图
+//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(test:)];
+//        [item addGestureRecognizer:tap];
     }
 }
 
-- (void)test:(UITapGestureRecognizer *)tap{
-    UIView *view = [tap view];
+- (void)didItemView:(ItemView *)itemView atIndex:(NSInteger)index{
     [UIView beginAnimations:nil context:NULL];
-    _selectView.frame = CGRectMake(5+65 * view.tag, _tabBarBG.height/2-45.0/2, 50, 45);
+    _selectView.frame = CGRectMake(5+65 * index, _tabBarBG.height/2-45.0/2, 50, 45);
     [UIView commitAnimations];
     
-    self.selectedIndex = view.tag;
+    self.selectedIndex = index;
 }
+
+//- (void)test:(UITapGestureRecognizer *)tap{
+//    UIView *view = [tap view];
+//    [UIView beginAnimations:nil context:NULL];
+//    _selectView.frame = CGRectMake(5+65 * view.tag, _tabBarBG.height/2-45.0/2, 50, 45);
+//    [UIView commitAnimations];
+//    
+//    self.selectedIndex = view.tag;
+//}
 
 #pragma mark - Memory
 - (void)didReceiveMemoryWarning {

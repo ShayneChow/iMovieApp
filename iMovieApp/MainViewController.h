@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIViewExt.h"
 
-@interface MainViewController : UITabBarController{
+@interface MainViewController : UITabBarController<UIWebViewDelegate>{
 @private
     UIImageView *_tabBarBG;
     UIImageView *_selectView;
