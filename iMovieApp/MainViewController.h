@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UIViewExt.h"
+#import "ItemView.h"
 
-@interface MainViewController : UITabBarController<UIWebViewDelegate>{
+@interface MainViewController : UITabBarController<ItemViewDelegate>{
 @private
     UIImageView *_tabBarBG;
     UIImageView *_selectView;

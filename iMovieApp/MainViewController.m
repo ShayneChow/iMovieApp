@@ -13,7 +13,7 @@
 #import "CinemaViewController.h"
 #import "MoreViewController.h"
 #import "BaseNavigationController.h"
-#import "ItemView.h"
+//#import "ItemView.h"
 
 @interface MainViewController ()
 
