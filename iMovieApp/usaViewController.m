@@ -33,8 +33,14 @@
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     self.view = view;
     
-    [self loadListView];
-    [self loadPosterView];
+    [self loadListView];    //加载表视图
+    [self loadPosterView];  //加载海报视图
+    //加载NavigationItem
+    UIView *itemBaseView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, 55, 40)];
+//    UIImageView *
+    itemBaseView.backgroundColor = [UIColor redColor];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:itemBaseView];
+//    self.navigationItem.rightBarButtonItem = [rightItem autorelease];
 }
 
 - (void)viewDidLoad {
