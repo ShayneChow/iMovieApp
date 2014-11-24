@@ -41,11 +41,9 @@
 }
 
 - (void)didItemView:(UITapGestureRecognizer *)tap{
-    if ([self.delegate respondsToSelector:@selector(didItemView:atIndex:)]) {
-        
-        [self.delegate didItemView:self atIndex:self.tag];
+    if ([self._delegate respondsToSelector:@selector(didItemView:atIndex:)]) {        
+        [self._delegate didItemView:self atIndex:self.tag];
     }
-
 }
 
 @end

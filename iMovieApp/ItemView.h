@@ -21,12 +21,12 @@
 @private
     UIImageView *_item;
     UILabel *_title;
-    id <ItemViewDelegate> __delegate;
+    id <ItemViewDelegate> delegate;
 }
 
 //公开两个私有变量供本类调用
 @property (nonatomic, readonly) UIImageView *item;
 @property (nonatomic, readonly) UILabel *title;
-@property (nonatomic, assign) id <ItemViewDelegate> delegate;
+@property (nonatomic, assign) id <ItemViewDelegate> _delegate;
 
 @end

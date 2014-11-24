@@ -92,7 +92,7 @@
         
         ItemView *itemView = [[ItemView alloc] initWithFrame:CGRectMake(5+x, _tabBarBG.height/2-45.0/2, 50, 45)];
         itemView.tag = index;
-        itemView.delegate = self;   //设置委托
+        itemView._delegate = self;   //设置委托
         itemView.item.image = [UIImage imageNamed:imgs[index]];
         itemView.title.text = titles[index];
         [_tabBarBG addSubview:itemView];
