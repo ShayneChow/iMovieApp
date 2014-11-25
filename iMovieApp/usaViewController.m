@@ -22,6 +22,9 @@
 //添加NavigationItem
 - (void)loadNavigationItem;
 
+//过度动画效果
+- (void)animationBaseView:(UIView *)baseView flag:(BOOL)flag;
+
 @end
 
 @implementation USAViewController
@@ -93,27 +96,37 @@
     self.navigationItem.rightBarButtonItem = rightItem ;    //将rightItem赋值给系统的navigationItem.rightBarButtonItem（固定位置）
 }//添加NavigationItem
 
+- (void)animationBaseView:(UIView *)baseView flag:(BOOL)flag{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [baseView exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
+//    if (flag) {
+//        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:baseView cache:YES];
+//    }else{
+//        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:baseView cache:YES];
+//    } //此段代码可以简化为以下三木运算
+    [UIView setAnimationTransition:flag ? UIViewAnimationTransitionFlipFromLeft : UIViewAnimationTransitionFlipFromRight forView:baseView cache:YES];
+    [UIView commitAnimations];
+}//翻转的过度动画效果
+
 #pragma mark - Actions Method
 - (void)changeBrowseMode{
     //获得itemBaseView
-    UIView *baseItenView = [self.navigationItem.rightBarButtonItem customView];
+    UIView *baseItemView = [self.navigationItem.rightBarButtonItem customView];
     
-    UIView *posterItem = [baseItenView viewWithTag:kPosterItemTag];
-    UIView *listItem   = [baseItenView viewWithTag:kListItemTag];
+    UIView *posterItem = [baseItemView viewWithTag:kPosterItemTag];
+    UIView *listItem   = [baseItemView viewWithTag:kListItemTag];
     
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.5];
-    [baseItenView exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
+    [self animationBaseView:self.view flag:posterItem.hidden];
+    [self animationBaseView:baseItemView flag:posterItem.hidden];
+    
     if (posterItem.hidden) {
         posterItem.hidden = NO;
         listItem.hidden = YES;
-        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:baseItenView cache:YES];
     }else{
         posterItem.hidden = YES;
         listItem.hidden = NO;
-        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:baseItenView cache:YES];
     }
-    [UIView commitAnimations];
 }
 
 #pragma mark - Memory
