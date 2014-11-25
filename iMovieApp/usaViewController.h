@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewExt.h"
 
 @interface USAViewController : UIViewController{
 @private
