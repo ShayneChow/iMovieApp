@@ -51,7 +51,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [NetworkService testData];
+    id result = [NetworkService testData];
+    NSLog(@"result title: %@", [result objectForKey:@"titleCn"]);
+    NSLog(@"result type: %@", [result objectForKey:@"type"]);
+    NSLog(@"result release: %@", [result objectForKey:@"release"]);
     // Do any additional setup after loading the view.
     
 }

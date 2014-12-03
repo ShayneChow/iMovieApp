@@ -14,7 +14,12 @@
 + (id)testData{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"json"];
     NSLog(@"path: %@", path);
-    return nil;
+    
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    
+    id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
+    
+    return result;
 }
 
 @end
