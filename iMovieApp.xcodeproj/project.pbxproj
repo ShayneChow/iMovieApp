@@ -73,6 +73,7 @@
 		26A6440F1A2EB87800E84C18 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 26A6440E1A2EB87800E84C18 /* test.json */; };
 		26A644131A2EBAFF00E84C18 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A644121A2EBAFF00E84C18 /* NetworkService.m */; };
 		26A644171A2EC58500E84C18 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A644161A2EC58500E84C18 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26A6441A1A2EF77100E84C18 /* NorthUSA.json in Resources */ = {isa = PBXBuildFile; fileRef = 26A644191A2EF77100E84C18 /* NorthUSA.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,7 @@
 		26A644121A2EBAFF00E84C18 /* NetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
 		26A644151A2EC58500E84C18 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		26A644161A2EC58500E84C18 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		26A644191A2EF77100E84C18 /* NorthUSA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NorthUSA.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +427,7 @@
 		26A644081A2EB7B900E84C18 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				26A644191A2EF77100E84C18 /* NorthUSA.json */,
 				26A6440E1A2EB87800E84C18 /* test.json */,
 			);
 			name = data;
@@ -535,6 +538,7 @@
 				260FDE571A1D819800B28326 /* Default-568h@2x.png in Resources */,
 				260FDE181A1D801A00B28326 /* scspxw@2x.png in Resources */,
 				260FDE211A1D80A700B28326 /* more_select_setting@2x.png in Resources */,
+				26A6441A1A2EF77100E84C18 /* NorthUSA.json in Resources */,
 				262CF7B61A1C49D3000C51F2 /* LaunchScreen.xib in Resources */,
 				260FDE411A1D816A00B28326 /* poster_home.png in Resources */,
 				260FDE3F1A1D816A00B28326 /* movie_select_home.png in Resources */,

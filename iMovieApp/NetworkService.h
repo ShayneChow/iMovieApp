@@ -12,4 +12,6 @@
 
 + (id)testData; //测试数据
 
++ (id)northUSA; //北美票房数据
+
 @end
