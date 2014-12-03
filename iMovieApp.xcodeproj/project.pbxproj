@@ -62,7 +62,6 @@
 		262CF7B11A1C49D3000C51F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262CF7AF1A1C49D3000C51F2 /* Main.storyboard */; };
 		262CF7B31A1C49D3000C51F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262CF7B21A1C49D3000C51F2 /* Images.xcassets */; };
 		262CF7B61A1C49D3000C51F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262CF7B41A1C49D3000C51F2 /* LaunchScreen.xib */; };
-		262CF7C21A1C49D3000C51F2 /* iMovieAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF7C11A1C49D3000C51F2 /* iMovieAppTests.m */; };
 		262CF8321A1C4DDD000C51F2 /* USAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8311A1C4DDD000C51F2 /* USAViewController.m */; };
 		262CF8351A1C4DF9000C51F2 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8341A1C4DF9000C51F2 /* TopViewController.m */; };
 		262CF8381A1C4E0F000C51F2 /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8371A1C4E0F000C51F2 /* CinemaViewController.m */; };
@@ -73,6 +72,7 @@
 		262CF8491A1CB5E9000C51F2 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8481A1CB5E9000C51F2 /* UIViewExt.m */; };
 		26A6440F1A2EB87800E84C18 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 26A6440E1A2EB87800E84C18 /* test.json */; };
 		26A644131A2EBAFF00E84C18 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A644121A2EBAFF00E84C18 /* NetworkService.m */; };
+		26A644171A2EC58500E84C18 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A644161A2EC58500E84C18 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +168,8 @@
 		26A6440E1A2EB87800E84C18 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		26A644111A2EBAFF00E84C18 /* NetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
 		26A644121A2EBAFF00E84C18 /* NetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
+		26A644151A2EC58500E84C18 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		26A644161A2EC58500E84C18 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		262CF7A51A1C49D3000C51F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				26A644141A2EC52E00E84C18 /* openSource */,
 				26A644101A2EBA9500E84C18 /* network */,
 				26A644081A2EB7B900E84C18 /* data */,
 				262CF8461A1CB590000C51F2 /* util */,
@@ -436,6 +439,15 @@
 			name = network;
 			sourceTree = "<group>";
 		};
+		26A644141A2EC52E00E84C18 /* openSource */ = {
+			isa = PBXGroup;
+			children = (
+				26A644151A2EC58500E84C18 /* JSONKit.h */,
+				26A644161A2EC58500E84C18 /* JSONKit.m */,
+			);
+			name = openSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -597,6 +609,7 @@
 				26A644131A2EBAFF00E84C18 /* NetworkService.m in Sources */,
 				262CF8321A1C4DDD000C51F2 /* USAViewController.m in Sources */,
 				262CF7A81A1C49D3000C51F2 /* main.m in Sources */,
+				26A644171A2EC58500E84C18 /* JSONKit.m in Sources */,
 				262CF83B1A1C4E22000C51F2 /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,7 +618,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262CF7C21A1C49D3000C51F2 /* iMovieAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

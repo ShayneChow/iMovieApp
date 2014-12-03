@@ -7,6 +7,7 @@
 //
 
 #import "NetworkService.h"
+#import "JSONKit.h"
 
 @implementation NetworkService
 
@@ -16,8 +17,10 @@
     NSLog(@"path: %@", path);
     
     NSData *data = [NSData dataWithContentsOfFile:path];
+//    NSString *version = [[UIDevice currentDevice] systemVersion];
     
-    id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
+//    id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
+    id result = [data objectFromJSONData];  //使用jsonKit框架提供的解析方法，替代上面原生方法
     
     return result;
 }
