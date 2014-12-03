@@ -71,6 +71,8 @@
 		262CF8411A1C5291000C51F2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8401A1C5291000C51F2 /* MainViewController.m */; };
 		262CF8441A1C8C7A000C51F2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8431A1C8C7A000C51F2 /* BaseNavigationController.m */; };
 		262CF8491A1CB5E9000C51F2 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 262CF8481A1CB5E9000C51F2 /* UIViewExt.m */; };
+		26A6440F1A2EB87800E84C18 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 26A6440E1A2EB87800E84C18 /* test.json */; };
+		26A644131A2EBAFF00E84C18 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A644121A2EBAFF00E84C18 /* NetworkService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,9 @@
 		262CF8431A1C8C7A000C51F2 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		262CF8471A1CB5E9000C51F2 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewExt.h; path = "../../../电影项目课件和代码/02 第二天/WXMovie/WXMovie/UIViewExt.h"; sourceTree = "<group>"; };
 		262CF8481A1CB5E9000C51F2 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewExt.m; path = "../../../电影项目课件和代码/02 第二天/WXMovie/WXMovie/UIViewExt.m"; sourceTree = "<group>"; };
+		26A6440E1A2EB87800E84C18 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		26A644111A2EBAFF00E84C18 /* NetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		26A644121A2EBAFF00E84C18 /* NetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +235,8 @@
 		262CF7A51A1C49D3000C51F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				26A644101A2EBA9500E84C18 /* network */,
+				26A644081A2EB7B900E84C18 /* data */,
 				262CF8461A1CB590000C51F2 /* util */,
 				262CF7CB1A1C4B1F000C51F2 /* image */,
 				262CF7A61A1C49D3000C51F2 /* Info.plist */,
@@ -412,6 +419,23 @@
 			name = util;
 			sourceTree = "<group>";
 		};
+		26A644081A2EB7B900E84C18 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				26A6440E1A2EB87800E84C18 /* test.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		26A644101A2EBA9500E84C18 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				26A644111A2EBAFF00E84C18 /* NetworkService.h */,
+				26A644121A2EBAFF00E84C18 /* NetworkService.m */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -517,6 +541,7 @@
 				260FDE641A1D819800B28326 /* tab_bg_all@2x.png in Resources */,
 				260FDE3D1A1D816A00B28326 /* movie_home.png in Resources */,
 				260FDE5A1A1D819800B28326 /* gray@2x.png in Resources */,
+				26A6440F1A2EB87800E84C18 /* test.json in Resources */,
 				260FDE191A1D801A00B28326 /* sctpxw.png in Resources */,
 				260FDE2A1A1D812C00B28326 /* movie_cinema.png in Resources */,
 				260FDE2B1A1D812C00B28326 /* movie_cinema@2x.png in Resources */,
@@ -569,6 +594,7 @@
 				262CF8441A1C8C7A000C51F2 /* BaseNavigationController.m in Sources */,
 				262CF8411A1C5291000C51F2 /* MainViewController.m in Sources */,
 				262CF7AB1A1C49D3000C51F2 /* AppDelegate.m in Sources */,
+				26A644131A2EBAFF00E84C18 /* NetworkService.m in Sources */,
 				262CF8321A1C4DDD000C51F2 /* USAViewController.m in Sources */,
 				262CF7A81A1C49D3000C51F2 /* main.m in Sources */,
 				262CF83B1A1C4E22000C51F2 /* NewsViewController.m in Sources */,

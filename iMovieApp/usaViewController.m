@@ -8,6 +8,7 @@
 
 #import "USAViewController.h"
 #import "ItemView.h"
+#import "NetworkService.h"
 #define kPosterItemTag 101
 #define kListItemTag   102
 
@@ -50,6 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [NetworkService testData];
     // Do any additional setup after loading the view.
     
 }
@@ -127,7 +129,7 @@
         posterItem.hidden = YES;
         listItem.hidden = NO;
     }
-}
+}//改变浏览方式
 
 #pragma mark - Memory
 - (void)didReceiveMemoryWarning {
