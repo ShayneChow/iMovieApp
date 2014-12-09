@@ -13,5 +13,6 @@
 @private
     UITableView *_listView;
     UIView *_posterView;
+    NSMutableArray *_subjectsArray;
 }
 @end

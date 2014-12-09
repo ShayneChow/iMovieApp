@@ -9,6 +9,8 @@
 #import "USAViewController.h"
 #import "ItemView.h"
 #import "NetworkService.h"
+#import "MovieModel.h"
+
 #define kPosterItemTag 101
 #define kListItemTag   102
 
@@ -25,6 +27,12 @@
 
 //过度动画效果
 - (void)animationBaseView:(UIView *)baseView flag:(BOOL)flag;
+
+//请求首页数据
+- (void)requestData;
+
+//刷新UI
+- (void)refreshUI;
 
 @end
 
@@ -51,8 +59,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    id result = [NetworkService northUSA];
-    NSLog(@"result title: %@", [result objectForKey:@"title"]);
+    
+    //请求“网络”数据
+    [self requestData];
+//    id result = [NetworkService northUSA];
+//    NSLog(@"result subject title: %@", [[result objectAtIndex:0] objectForKey:@"box"]);
 //    NSLog(@"result type: %@", [result objectForKey:@"type"]);
 //    NSLog(@"result release: %@", [result objectForKey:@"release"]);
     // Do any additional setup after loading the view.
@@ -113,6 +124,30 @@
     [UIView setAnimationTransition:flag ? UIViewAnimationTransitionFlipFromLeft : UIViewAnimationTransitionFlipFromRight forView:baseView cache:YES];
     [UIView commitAnimations];
 }//翻转的过度动画效果
+
+- (void)refreshUI{
+    MovieModel *movieModel = _subjectsArray[0];
+    NSLog(@"content: %@", [movieModel.subject objectForKey:@"title"]);
+}//刷新UI
+
+/*************************************************数据模型处理部分**************************************************/
+
+- (void)requestData{
+    NSArray *result = [NetworkService northUSA];    //获取的是数组，可直接使用 NSArray 替换 id 类型
+    
+    _subjectsArray = [[NSMutableArray alloc] initWithCapacity:result.count];
+    for (id data in result) {
+        //遍历 result 数组, 数组的值是data，data为字典
+        MovieModel *movieModel = [[MovieModel alloc] init];
+        movieModel.box = [data objectForKey:@"box"];
+        movieModel.subject = [data objectForKey:@"subject"];
+        movieModel.rank = [data objectForKey:@"rank"];
+        [_subjectsArray addObject:movieModel];
+    }
+    [self refreshUI];
+}
+
+/*************************************************数据模型处理部分**************************************************/
 
 #pragma mark - Actions Method
 - (void)changeBrowseMode{

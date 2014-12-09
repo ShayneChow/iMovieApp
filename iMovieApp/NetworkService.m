@@ -37,7 +37,7 @@
 //    NSLog(@"path: %@", path);
 //    使用name传值，替代以上冗余部分
     
-    return [self parserData:@"NorthUSA.json"];
+    return [[self parserData:@"NorthUSA.json"] objectForKey:@"subjects"];//获取 NorthUSA.json 文件字典中的 subjects 数组
 }
 
 @end
