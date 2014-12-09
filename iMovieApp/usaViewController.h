@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "UIViewExt.h"
 
-@interface USAViewController : UIViewController{
+@interface USAViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
 @private
-    UITableView *_listView;
+    UITableView *_listView;     //表视图
     UIView *_posterView;
     NSMutableArray *_subjectsArray;
 }

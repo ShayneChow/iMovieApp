@@ -50,9 +50,10 @@
 - (void)loadView{
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     self.view = view;
+    view.backgroundColor = [UIColor blackColor];
     
-    [self loadListView];    //加载表视图
     [self loadPosterView];  //加载海报视图
+    [self loadListView];    //加载表视图
     [self loadNavigationItem];//加载NavigationItem
     
 }
@@ -61,7 +62,9 @@
     [super viewDidLoad];
     
     //请求“网络”数据
-    [self requestData];
+//    [self requestData]; //直接加载数据
+    [self performSelector:@selector(requestData) withObject:nil afterDelay:1];  //延时1秒加载数据，模拟网络请求的延时效果
+    
 //    id result = [NetworkService northUSA];
 //    NSLog(@"result subject title: %@", [[result objectAtIndex:0] objectForKey:@"box"]);
 //    NSLog(@"result type: %@", [result objectForKey:@"type"]);
@@ -75,6 +78,13 @@
     int kDeviceHeight = [UIScreen mainScreen].bounds.size.height;
     int kDeviceWidth = [UIScreen mainScreen].bounds.size.width;
     _listView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kDeviceWidth, kDeviceHeight-20-44-49) style:UITableViewStylePlain];
+
+    _listView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_main"]];
+    _listView.indicatorStyle = UIScrollViewIndicatorStyleWhite;     //窗口滚动条设置为白色
+    
+    _listView.dataSource = self;    //数据源方法
+    _listView.delegate = self;      //代理方法
+    
     [self.view addSubview:_listView];
 }//加载表视图
 
@@ -126,8 +136,9 @@
 }//翻转的过度动画效果
 
 - (void)refreshUI{
-    MovieModel *movieModel = _subjectsArray[0];
-    NSLog(@"content: %@", [movieModel.subject objectForKey:@"title"]);
+//    MovieModel *movieModel = _subjectsArray[0];
+//    NSLog(@"content: %@", [movieModel.subject objectForKey:@"title"]);
+    [_listView reloadData];
 }//刷新UI
 
 /*************************************************数据模型处理部分**************************************************/
@@ -148,6 +159,34 @@
 }
 
 /*************************************************数据模型处理部分**************************************************/
+
+#pragma mark - TableView DataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [_subjectsArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //定义静态标识符
+    static NSString *cellIdentifier = @"cell";
+    
+    //检查表视图中是否存在闲置的单元格
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];   //有，即可使用
+    
+    if (cell == nil) {  //没有，创建则单元格
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_main"]];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.text = @"test";  //设置一个测试单元格数据
+    
+    return cell;
+}
+
+#pragma mark - TableView Delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}//使用delegate方法，设置行高为100
 
 #pragma mark - Actions Method
 - (void)changeBrowseMode{
