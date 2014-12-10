@@ -10,6 +10,7 @@
 #import "ItemView.h"
 #import "NetworkService.h"
 #import "MovieModel.h"
+#import "MovieCell.h"
 
 #define kPosterItemTag 101
 #define kListItemTag   102
@@ -177,16 +178,18 @@
     }
     
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_main"]];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.text = @"test";  //设置一个测试单元格数据
+//    cell.textLabel.textColor = [UIColor whiteColor];
+//    cell.textLabel.text = @"test";  //设置一个测试单元格数据
+    
+//    cell.movieModel = _subjectsArray[indexPath.row];
     
     return cell;
 }
 
 #pragma mark - TableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
-}//使用delegate方法，设置行高为100
+    return 80;
+}//使用delegate方法，设置行高为80
 
 #pragma mark - Actions Method
 - (void)changeBrowseMode{
