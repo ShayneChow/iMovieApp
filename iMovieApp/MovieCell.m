@@ -11,11 +11,11 @@
 
 @implementation MovieCell
 
-//- (void)awakeFromNib {
-//    // Initialization code
+- (void)awakeFromNib {
+    // Initialization code
 //    [super awakeFromNib];
 //    [self initSubviews];
-//}
+}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -24,7 +24,7 @@
         
         [self initSubviews];
         
-        self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+//        self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }
     return self;
 }
@@ -49,6 +49,7 @@
     _ratingView = [[UIView alloc] initWithFrame:CGRectZero];
     _ratingView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:_ratingView];
+    
 }
 
 
@@ -59,12 +60,14 @@
 }
 
 - (void)layoutSubviews{
-//    [super layoutSubviews];
+    [super layoutSubviews];
     
+    //单元格布局
     _imgView.frame = CGRectMake(10, 10, 40, 60);
     _titleLable.frame = CGRectMake(_imgView.right+10, 10, 220, 30);
     _yearLable.frame = CGRectMake(_titleLable.left, _titleLable.bottom, _titleLable.width/2, 30);
     _ratingView.frame = CGRectMake(_yearLable.left, _titleLable.bottom, _yearLable.width, 30);
+
 }
 
 @end

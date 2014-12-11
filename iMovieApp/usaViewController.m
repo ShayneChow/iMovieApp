@@ -168,13 +168,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //定义静态标识符
-    static NSString *cellIdentifier = @"cell";
+    static NSString *cellIdentifier = @"MovieCell";
     
     //检查表视图中是否存在闲置的单元格
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];   //有，即可使用
+    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];   //有，即可使用
     
     if (cell == nil) {  //没有，创建则单元格
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[MovieCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_main"]];
