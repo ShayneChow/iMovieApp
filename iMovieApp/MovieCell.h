@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class MovieModel;
 @interface MovieCell : UITableViewCell{
 @private
     UIImageView *_imgView;
     UILabel     *_titleLable;
     UILabel     *_yearLable;
     UIView      *_ratingView;
+    MovieModel  *_movieModel;
 }
 
+@property (nonatomic, retain) MovieModel *movieModel;
 
 @end

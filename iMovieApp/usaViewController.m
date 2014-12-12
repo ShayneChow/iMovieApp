@@ -181,7 +181,7 @@
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.textLabel.text = @"test";  //设置一个测试单元格数据
     
-//    cell.movieModel = _subjectsArray[indexPath.row];
+    cell.movieModel = _subjectsArray[indexPath.row];
     
     return cell;
 }
