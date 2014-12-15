@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class MovieModel;
+@class MovieModel, RatingView;
 @interface MovieCell : UITableViewCell{
 @private
     UIImageView *_imgView;
     UILabel     *_titleLable;
     UILabel     *_yearLable;
-    UIView      *_ratingView;
+    RatingView  *_ratingView;
     MovieModel  *_movieModel;
 }
 

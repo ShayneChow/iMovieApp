@@ -10,6 +10,7 @@
 #import "UIViewExt.h"
 #import "MovieModel.h"
 #import "UIImageView+WebCache.h"
+#import "RatingView.h"
 
 @implementation MovieCell
 
@@ -52,8 +53,8 @@
     [self.contentView addSubview:_yearLable];
     
     //评级
-    _ratingView = [[UIView alloc] initWithFrame:CGRectZero];
-    _ratingView.backgroundColor = [UIColor redColor];
+    _ratingView = [[RatingView alloc] initWithFrame:CGRectZero];
+    _ratingView.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_ratingView];
     
 }
@@ -85,7 +86,9 @@
     _yearLable.frame = CGRectMake(_titleLable.left, _titleLable.bottom, _titleLable.width/2, 30);
     _yearLable.text = [NSString stringWithFormat:@"年份：%@",[contentDic objectForKey:@"year"]];  //输出发行年份
     
-    _ratingView.frame = CGRectMake(_yearLable.right, _titleLable.bottom, _yearLable.width, 30);
+    _ratingView.frame = CGRectMake(_yearLable.right, _titleLable.bottom + 7, _yearLable.width, 30);
+    _ratingView.style = kSmallStyle;
+    _ratingView.ratingScore = [[[contentDic objectForKey:@"rating"] objectForKey:@"average"] floatValue];
 
 }
 

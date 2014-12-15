@@ -79,6 +79,7 @@
 		26A644131A2EBAFF00E84C18 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A644121A2EBAFF00E84C18 /* NetworkService.m */; };
 		26A644171A2EC58500E84C18 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A644161A2EC58500E84C18 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26A6441A1A2EF77100E84C18 /* NorthUSA.json in Resources */ = {isa = PBXBuildFile; fileRef = 26A644191A2EF77100E84C18 /* NorthUSA.json */; };
+		26CF37351A3EF4A7008887FE /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF37341A3EF4A7008887FE /* RatingView.m */; };
 		26D5C8DC1A382D3D0026EBDD /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D5C8DB1A382D3D0026EBDD /* MovieCell.m */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,8 @@
 		26A644151A2EC58500E84C18 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		26A644161A2EC58500E84C18 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		26A644191A2EF77100E84C18 /* NorthUSA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NorthUSA.json; sourceTree = "<group>"; };
+		26CF37331A3EF4A7008887FE /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
+		26CF37341A3EF4A7008887FE /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
 		26D5C8DA1A382D3D0026EBDD /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		26D5C8DB1A382D3D0026EBDD /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -409,6 +412,8 @@
 				262CF8311A1C4DDD000C51F2 /* USAViewController.m */,
 				26D5C8DA1A382D3D0026EBDD /* MovieCell.h */,
 				26D5C8DB1A382D3D0026EBDD /* MovieCell.m */,
+				26CF37331A3EF4A7008887FE /* RatingView.h */,
+				26CF37341A3EF4A7008887FE /* RatingView.m */,
 			);
 			name = USA;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 				262CF8351A1C4DF9000C51F2 /* TopViewController.m in Sources */,
 				262CF83E1A1C4E3C000C51F2 /* MoreViewController.m in Sources */,
 				263376771A3A856100F7535C /* UIImageView+WebCache.m in Sources */,
+				26CF37351A3EF4A7008887FE /* RatingView.m in Sources */,
 				262CF8491A1CB5E9000C51F2 /* UIViewExt.m in Sources */,
 				260FDE701A1D8B9500B28326 /* ItemView.m in Sources */,
 				262CF8381A1C4E0F000C51F2 /* CinemaViewController.m in Sources */,
